@@ -7,8 +7,31 @@ h6,
 p {
   margin: 0;
 }
+p {
+  font-size: 18px;
+}
 h1 {
   font-family: 'Oswald';
+}
+h2 {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+}
+h3 {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+}
+.h2-sec1 {
+  padding-bottom: 25px;
+}
+.h3-sec1 {
+  padding-bottom: 10px;
 }
 ul {
   list-style: none;
@@ -37,6 +60,12 @@ a {
 }
 a:hover {
   color: #252525;
+}
+.button-wrapper-header {
+  display: inline-flex;
+}
+.button-wrapper-header a {
+  font-weight: 700;
 }
 .button {
   font-weight: 700;
@@ -125,9 +154,6 @@ a:hover {
 .header-container .header-wrapper .header-right-menu .registration-wrapp {
   cursor: pointer;
 }
-.header-container .header-wrapper .header-right-menu .button-wrapper-header a {
-  font-weight: 700;
-}
 .header-container .header-wrapper .toggle {
   display: none;
   background: none;
@@ -186,4 +212,20 @@ a:hover {
   font-size: 20px;
   font-weight: 500;
   line-height: 27px;
+}
+#section-1-how-it-work {
+  padding: 100px 0 50px;
+}
+#section-1-how-it-work .items-col {
+  display: flex;
+}
+#section-1-how-it-work .items-col p {
+  display: flex;
+  align-items: center;
+}
+#section-1-how-it-work .block-1 {
+  padding-bottom: 165px;
+}
+#section-1-how-it-work .block-2 p {
+  padding-bottom: 20px;
 }

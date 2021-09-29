@@ -16,8 +16,36 @@ p {
     margin: 0;
 }
 
+p {
+    font-size: 18px;
+}
+
 h1 {
     font-family: 'Oswald';
+}
+
+h2 {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+}
+
+h3 {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.h2-sec1 {
+    padding-bottom: 25px;
+}
+
+.h3-sec1 {
+    padding-bottom: 10px;
 }
 
 ul {
@@ -55,6 +83,13 @@ a {
     }
 }
 
+.button-wrapper-header {
+    display: inline-flex;
+    a {
+        font-weight: 700;
+    }
+}
+
 .button {
     font-weight: 700;
     line-height: 24px;
@@ -75,6 +110,7 @@ a {
 
 .btn-header {
     border-radius: 10px;
+
     &:hover {
         background-color: rgba(254, 227, 67, 0.5);
     }
@@ -82,6 +118,7 @@ a {
 
 .btn-content {
     border-radius: 15px;
+
     &:hover {
         box-shadow: inset 2px -7px 11px rgba(80, 92, 51, 0.17);
     }
@@ -159,11 +196,7 @@ a {
                 cursor: pointer;
             }
 
-            .button-wrapper-header {
-                a {
-                    font-weight: 700;
-                }
-            }
+
         }
 
         .toggle {
@@ -237,4 +270,26 @@ a {
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
+}
+
+#section-1-how-it-work {
+    padding: 100px 0 50px;
+
+    .items-col {
+        display: flex;
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .block-1 {
+        padding-bottom: 165px;
+    }
+
+    .block-2 {
+        p {
+            padding-bottom: 20px;
+        }
+    }
 }
