@@ -1,4 +1,8 @@
 @--grey: #808080;
+@--dark: #252525;
+@--black: #000000;
+@--dark-2: #2D2D2D;
+@--yellow: #FEE343;
 
 
 
@@ -32,20 +36,67 @@ body {
     margin: 0;
     font-size: 16px;
     font-family: 'Roboto';
+
     #page {
         position: relative;
         overflow: hidden;
     }
 }
 
+a {
+    color: @--dark;
+
+    &:hover {
+        color: @--dark;
+    }
+}
+
+.button {
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    color: @--dark-2;
+
+    &:hover {
+        text-decoration: none;
+
+    }
+}
+
+.btn-yellow {
+    background-color: @--yellow;
+    padding: 14px 40px;
+    border: none;
+    font-size: 16px;
+
+    &:hover {
+        background-color: rgba(254, 227, 67, 0.5);
+    }
+}
+
 
 .header-container {
     display: flex;
-    padding: 25px 0;
+    padding: 10px 0 14px;
     position: fixed;
     width: 100%;
     z-index: 2;
     transition: all 250ms linear;
+    color: @--dark;
+    top: 0;
+
+    .menu-item {
+        list-style-type: none;
+        text-transform: uppercase;
+        margin-left: 40px;
+        align-items: center;
+        display: flex;
+
+        a {
+            font-weight: 300;
+        }
+    }
 
     .header-wrapper {
         min-width: 1780px;
@@ -60,20 +111,15 @@ body {
             .header-logo {
                 max-height: 48px;
                 max-width: 200px;
+                margin-right: 10px;
             }
 
             .header-menu {
                 margin: auto 0;
 
-                ul {
+                .menu-header-menu {
                     display: flex;
                     margin: 0;
-
-                    li {
-                        list-style-type: none;
-                        text-transform: uppercase;
-                        margin-left: 60px;
-                    }
                 }
 
                 .hover-menu {
@@ -82,36 +128,87 @@ body {
             }
         }
 
-        .button-wrapper-header {
-            margin: auto 0;
+        .header-right-menu {
+            display: flex;
+
+            .bill-switch {
+                cursor: pointer;
+
+                .bill-switch-chevron-wrapp {
+                    margin-left: 5px;
+                }
+            }
+
+            .registration-wrapp {
+                cursor: pointer;
+            }
+
+            .button-wrapper-header {
+                a {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .toggle {
+            display: none;
+            background: none;
+            position: absolute;
+            right: 35px;
+            line-height: 45px;
+            padding: 0 15px 0px 15px;
+            color: @--grey;
+            border: 0;
+            font-size: 2.4em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .cross {
+            display: none;
+            background: none;
+            position: absolute;
+            right: 35px;
+            padding: 0 15px 0px 15px;
+            color: @--grey;
+            border: 0;
+            font-size: 4em;
+            line-height: 65px;
+            font-weight: bold;
+            cursor: pointer;
         }
     }
+}
 
-    .toggle {
-        display: none;
-        background: none;
-        position: absolute;
-        right: 35px;
-        line-height: 45px;
-        padding: 0 15px 0px 15px;
-        color: @--grey;
-        border: 0;
-        font-size: 2.4em;
-        font-weight: bold;
-        cursor: pointer;
+#content {
+    margin-top: 75px;
+}
+
+.top-banner-wrapper {
+    background-image: url('/assets/img/banner-img.png');
+    position: relative;
+    padding: 212px 0 224px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .title-container {
+        .subtitile-banner {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            color:@--black;
+        }
+
+        .h1-banner {}
+
     }
 
-    .cross {
-        display: none;
-        background: none;
-        position: absolute;
-        right: 35px;
-        padding: 0 15px 0px 15px;
-        color: @--grey;
-        border: 0;
-        font-size: 4em;
-        line-height: 65px;
-        font-weight: bold;
-        cursor: pointer;
+    .circle-info-container {
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    img {
+        max-height: 820px;
     }
 }

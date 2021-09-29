@@ -20,39 +20,77 @@
 
 <body>
   <header>
-    <div class="header-container ">
-          <div class="header-wrapper">
-              <div class="logo-menu-wrapp">
-                  <a href="#" class="header-logo">
-                      <img src="/assets/img/logo.png" alt="logo">
-                  </a>
-                  <button class="toggle">&#9776;</button>
-                  <button class="cross">&#735;</button>
+    <div class=" header-container ">
+      <div class=" container header-wrapper">
+        <div class="logo-menu-wrapp">
+          <a href="#" class="header-logo">
+            <img src="/assets/img/logo.png" alt="logo">
+          </a>
+          <button class="toggle">&#9776;</button>
+          <button class="cross">&#735;</button>
 
-                  <div class="header-menu ">
-                     <ul>
-                       <li><a href="#">PRODUCTS</a></li>
-                       <li><a href="#">OUR STORY</a></li>
-                     </ul>
+          <div class="header-menu ">
+            <ul class="menu-header-menu">
+              <li id="menu-item-1" class="menu-item"><a href="#">PRODUCTS</a></li>
+              <li id="menu-item-2" class="menu-item"><a href="#">OUR STORY</a></li>
+            </ul>
 
-                     <ul class="hover-menu">
-                       <li><a href="#">Smoothies</a></li>
-                       <li><a href="#">Oats</a></li>
-                       <li><a href="#">Supermeals</a></li>
-                       <li><a href="#">Falafel Pops</a></li>
-                       <li><a href="#">Soups</a></li>
-                       <li><a href="#">Preselected Boxes</a></li>
-                       <li><a href="#">Gifts</a></li>
-                     </ul>
-                  </div>
-              </div>
-              <div class="button-wrapper-header">
-                 
-              </div>
+            <ul class="hover-menu">
+              <li><a href="#">Smoothies</a></li>
+              <li><a href="#">Oats</a></li>
+              <li><a href="#">Supermeals</a></li>
+              <li><a href="#">Falafel Pops</a></li>
+              <li><a href="#">Soups</a></li>
+              <li><a href="#">Preselected Boxes</a></li>
+              <li><a href="#">Gifts</a></li>
+            </ul>
           </div>
-  </div>
-</header>
+        </div>
+
+        <ul class="header-right-menu">
+          <li class="menu-item bill-switch">
+            CAD
+            <div class="bill-switch-chevron-wrapp">
+              <img src="/assets/img/akar-icons_chevron-down.png" alt="chevron-down">
+            </div>
+          </li>
+          <li class="menu-item registration-wrapp">
+            <a href="#">
+              <img src="/assets/img/registration.svg" alt="registration">
+            </a>
+          </li>
+          <li class="menu-item button-wrapper-header">
+            <a href="#" class="button btn-yellow">LET’S BEGIN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
+
+  <div id="content">
+    <div class="top-banner-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md title-container">
+            <div class="subtitile-banner">
+              PREPARED FRESH & DELIVERED FROZEN
+            </div>
+            <h1 class="h1-banner">CHEF CRAFTED SUPERFOODS</h1>
+            <div class="menu-item button-wrapper-header">
+              <a href="#" class="button btn-yellow">LET’S BEGIN</a>
+            </div>
+          </div>
+          <div class="col-md circle-info-container" style='background-image: url(<?= $banner_img_right ?>)'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+
+  </footer>
+
 
 
 
