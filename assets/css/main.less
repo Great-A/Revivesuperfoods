@@ -16,6 +16,10 @@ p {
     margin: 0;
 }
 
+h1 {
+    font-family: 'Oswald';
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -52,27 +56,39 @@ a {
 }
 
 .button {
-    border-radius: 10px;
     font-weight: 700;
     line-height: 24px;
     cursor: pointer;
     color: @--dark-2;
-
-    &:hover {
-        text-decoration: none;
-
-    }
-}
-
-.btn-yellow {
-    background-color: @--yellow;
-    padding: 14px 40px;
     border: none;
+    padding: 14px 40px 12px;
     font-size: 16px;
 
     &:hover {
+        text-decoration: none;
+    }
+}
+
+.yellow {
+    background-color: @--yellow;
+}
+
+.btn-header {
+    border-radius: 10px;
+    &:hover {
         background-color: rgba(254, 227, 67, 0.5);
     }
+}
+
+.btn-content {
+    border-radius: 15px;
+    &:hover {
+        box-shadow: inset 2px -7px 11px rgba(80, 92, 51, 0.17);
+    }
+}
+
+.big-container {
+    max-width: 1410px;
 }
 
 
@@ -187,7 +203,7 @@ a {
 .top-banner-wrapper {
     background-image: url('/assets/img/banner-img.png');
     position: relative;
-    padding: 212px 0 224px;
+    padding: 212px 0 254px;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -196,19 +212,29 @@ a {
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
-            color:@--black;
+            color: @--black;
         }
 
-        .h1-banner {}
-
+        .h1-banner {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 65px;
+            margin-bottom: 30px;
+        }
     }
 
-    .circle-info-container {
-        background-position: center;
-        background-repeat: no-repeat;
+    .button-wrapper {
+        display: flex;
     }
 
-    img {
-        max-height: 820px;
-    }
+
+}
+
+.under-banner-menu {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
 }

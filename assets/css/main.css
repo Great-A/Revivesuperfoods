@@ -7,6 +7,9 @@ h6,
 p {
   margin: 0;
 }
+h1 {
+  font-family: 'Oswald';
+}
 ul {
   list-style: none;
   padding: 0;
@@ -36,23 +39,34 @@ a:hover {
   color: #252525;
 }
 .button {
-  border-radius: 10px;
   font-weight: 700;
   line-height: 24px;
   cursor: pointer;
   color: #2D2D2D;
+  border: none;
+  padding: 14px 40px 12px;
+  font-size: 16px;
 }
 .button:hover {
   text-decoration: none;
 }
-.btn-yellow {
+.yellow {
   background-color: #FEE343;
-  padding: 14px 40px;
-  border: none;
-  font-size: 16px;
 }
-.btn-yellow:hover {
+.btn-header {
+  border-radius: 10px;
+}
+.btn-header:hover {
   background-color: rgba(254, 227, 67, 0.5);
+}
+.btn-content {
+  border-radius: 15px;
+}
+.btn-content:hover {
+  box-shadow: inset 2px -7px 11px rgba(80, 92, 51, 0.17);
+}
+.big-container {
+  max-width: 1410px;
 }
 .header-container {
   display: flex;
@@ -146,7 +160,7 @@ a:hover {
 .top-banner-wrapper {
   background-image: url('/assets/img/banner-img.png');
   position: relative;
-  padding: 212px 0 224px;
+  padding: 212px 0 254px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -156,10 +170,20 @@ a:hover {
   line-height: 27px;
   color: #000000;
 }
-.top-banner-wrapper .circle-info-container {
-  background-position: center;
-  background-repeat: no-repeat;
+.top-banner-wrapper .title-container .h1-banner {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 65px;
+  margin-bottom: 30px;
 }
-.top-banner-wrapper img {
-  max-height: 820px;
+.top-banner-wrapper .button-wrapper {
+  display: flex;
+}
+.under-banner-menu {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
 }
