@@ -1,3 +1,7 @@
+@--grey: #808080;
+
+
+
 h1,
 h2,
 h3,
@@ -27,9 +31,87 @@ div {
 body {
     margin: 0;
     font-size: 16px;
-
+    font-family: 'Roboto';
     #page {
         position: relative;
         overflow: hidden;
+    }
+}
+
+
+.header-container {
+    display: flex;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 250ms linear;
+
+    .header-wrapper {
+        min-width: 1780px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .logo-menu-wrapp {
+            display: flex;
+
+            .header-logo {
+                max-height: 48px;
+                max-width: 200px;
+            }
+
+            .header-menu {
+                margin: auto 0;
+
+                ul {
+                    display: flex;
+                    margin: 0;
+
+                    li {
+                        list-style-type: none;
+                        text-transform: uppercase;
+                        margin-left: 60px;
+                    }
+                }
+
+                .hover-menu {
+                    display: none;
+                }
+            }
+        }
+
+        .button-wrapper-header {
+            margin: auto 0;
+        }
+    }
+
+    .toggle {
+        display: none;
+        background: none;
+        position: absolute;
+        right: 35px;
+        line-height: 45px;
+        padding: 0 15px 0px 15px;
+        color: @--grey;
+        border: 0;
+        font-size: 2.4em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cross {
+        display: none;
+        background: none;
+        position: absolute;
+        right: 35px;
+        padding: 0 15px 0px 15px;
+        color: @--grey;
+        border: 0;
+        font-size: 4em;
+        line-height: 65px;
+        font-weight: bold;
+        cursor: pointer;
     }
 }
