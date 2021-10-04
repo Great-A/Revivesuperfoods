@@ -325,6 +325,9 @@ a:hover {
   font-size: 18px;
   line-height: 27px;
 }
+.slider {
+  display: flex;
+}
 .slick-track {
   display: flex;
   height: 100%;
