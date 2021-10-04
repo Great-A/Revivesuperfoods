@@ -36,16 +36,26 @@ h3 {
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 40px;
+
 }
 
 .h2-sec1 {
     padding-bottom: 25px;
 }
 
+.h2-center {
+    text-align: center;
+}
+
 .h3-sec1 {
     padding-bottom: 10px;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.h3-fz20-lh27 {
+    font-size: 20px;
+    line-height: 27px;
 }
 
 ul {
@@ -69,7 +79,7 @@ body {
     font-size: 16px;
     font-family: 'Roboto';
 
-    #page {
+    #content {
         position: relative;
         overflow: hidden;
     }
@@ -83,12 +93,7 @@ a {
     }
 }
 
-.button-wrapper-header {
-    display: inline-flex;
-    a {
-        font-weight: 700;
-    }
-}
+
 
 .button {
     font-weight: 700;
@@ -138,6 +143,7 @@ a {
     transition: all 250ms linear;
     color: @--dark;
     top: 0;
+    background-color: rgba(255,255,255,.77);
 
     .menu-item {
         list-style-type: none;
@@ -151,8 +157,16 @@ a {
         }
     }
 
+    .button-wrapper-header {
+        display: inline-flex;
+
+        a {
+            font-weight: 700;
+        }
+    }
+
     .header-wrapper {
-        
+
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -229,6 +243,10 @@ a {
     }
 }
 
+.button-wrapper {
+    display: flex;
+}
+
 #content {
     margin-top: 75px;
 }
@@ -255,12 +273,6 @@ a {
             margin-bottom: 30px;
         }
     }
-
-    .button-wrapper {
-        display: flex;
-    }
-
-
 }
 
 .under-banner-menu {
@@ -273,10 +285,11 @@ a {
 }
 
 #section-1-how-it-work {
-    padding: 100px 0 50px;
+    padding: 100px 0 40px;
 
     .items-col {
         display: flex;
+
         p {
             display: flex;
             align-items: center;
@@ -292,4 +305,62 @@ a {
             padding-bottom: 20px;
         }
     }
+
+    .img-wrapp-strawberry {
+        display: flex;
+        justify-content: right;
+    }
+}
+
+#section-2-best-sellers {
+    padding-bottom: 160px;
+
+
+    .h2-center {
+        padding-bottom: 60px;
+    }
+    .bg-spot {
+        background-size: contain;
+        background-repeat: no-repeat;
+         &:hover {
+            transition: 2s;
+         }
+    }
+
+    .bg-spot-red {
+        background-image: url("/assets/img/spot-pink.png");
+        &:hover {
+            background-image: url("/assets/img/spot-yellow.png");
+        }
+    }
+
+    .bg-spot-green {
+        background-image: url("/assets/img/spot-green.png");
+        
+        &:hover { 
+            background-image: url("/assets/img/spot-purple2.png");
+        }
+    }
+
+    .bg-spot-purple {
+        background-image: url("/assets/img/spot-purlple.png");
+        &:hover {
+            background-image: url("/assets/img/spot-yellow.png");
+        }
+    }
+
+    .bg-spot-purple2 {
+        background-image: url("/assets/img/spot-purple2.png");
+        &:hover {
+            background-image: url("/assets/img/spot-green.png");
+        }
+    }
+
+    .bg-spot-yellow {
+        background-image: url("/assets/img/spot-yellow.png");
+        &:hover {
+            background-image: url("/assets/img/spot-pink.png");
+        }
+    }
+    
 }
