@@ -39,6 +39,7 @@ h3 {
 .h3-fz20-lh27 {
   font-size: 20px;
   line-height: 27px;
+  padding-bottom: 5px;
 }
 ul {
   list-style: none;
@@ -251,7 +252,7 @@ a:hover {
   background-repeat: no-repeat;
 }
 #section-2-best-sellers .bg-spot:hover {
-  transition: 2s;
+  transition: 1.5s;
 }
 #section-2-best-sellers .bg-spot-red {
   background-image: url("/assets/img/spot-pink.png");
@@ -282,4 +283,76 @@ a:hover {
 }
 #section-2-best-sellers .bg-spot-yellow:hover {
   background-image: url("/assets/img/spot-pink.png");
+}
+#section-3-explore-products .container-sec-3 {
+  background-image: url("/assets/img/bg-spot-grey.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0 105px 135px 185px;
+}
+#section-3-explore-products .h2-center {
+  padding-bottom: 40px;
+}
+#section-3-explore-products .p-product {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+#section-4-from-our {
+  padding-bottom: 100px;
+}
+#section-4-from-our .h2-center {
+  padding-bottom: 30px;
+}
+#section-4-from-our .reviews {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+#section-4-from-our .reviews .img-wrapp img {
+  display: initial;
+  padding-bottom: 15px;
+}
+#section-4-from-our .reviews p {
+  padding-bottom: 15px;
+  font-weight: 300;
+  text-align: center;
+}
+#section-4-from-our .name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+}
+.slick-track {
+  display: flex;
+  height: 100%;
+}
+#section-5-social {
+  padding-bottom: 120px;
+}
+#section-5-social .h2-center {
+  padding-bottom: 25px;
+}
+#section-5-social .img-social img:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -5,6 +5,15 @@
   .container-sec-2 {
     min-width: 1890px;
   }
+  .container-sec-3 {
+    min-width: 1670px;
+  }
+  .container-sec-4 {
+    min-width: 1300px;
+  }
+  .container-sec-6 {
+    min-width: 1365px;
+  }
 }
 @media (min-width: 1200px) {
   .header-container .header-wrapper {
@@ -12,5 +21,11 @@
   }
   .container-sec-2 {
     min-width: 100%;
+  }
+}
+@media all and (max-width: 992px) {
+  #section-3-explore-products .container-sec-3 {
+    background: none;
+    margin: auto;
   }
 }
