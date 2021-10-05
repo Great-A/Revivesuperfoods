@@ -311,6 +311,12 @@ a {
     }
 
     .block-2 {
+        .fruits-img-wrapp {
+            // background-image: url("/assets/img/spot-grey-best-sellers-hover.svg");
+
+            &:hover {}
+        }
+
         p {
             padding-bottom: 20px;
         }
@@ -325,18 +331,26 @@ a {
 #section-2-best-sellers {
     padding-bottom: 160px;
 
-
     .h2-center {
         padding-bottom: 60px;
     }
 
     .bg-spot {
+        position: relative;
         background-size: contain;
         background-repeat: no-repeat;
-
+        transition: 1.5s;
         &:hover {
-            transition: 1.5s;
+            .button-wrapper {
+                display: block;
+            }
         }
+    }
+
+    .button-wrapper {
+        // display: none;
+        justify-content: center;
+        padding-top: 40px;
     }
 
     .bg-spot-red {
@@ -397,9 +411,13 @@ a {
 
     .p-product {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 21px;
         color: @--black;
+    }
+
+    .product-img {
+        padding-bottom: 40px;
     }
 }
 
@@ -544,6 +562,9 @@ a {
 
     .mfr-block-2 {
         padding-bottom: 88px;
+        img {
+            padding-bottom: 20px;
+        }
     }
 
     .mfr-block-3 {
@@ -637,6 +658,7 @@ footer {
 
         .flags {
             display: flex;
+            position: relative;
             flex-direction: column;
 
             .canada-flag {
@@ -645,6 +667,9 @@ footer {
             }
 
             .america-flag {
+                display: none;
+                position: absolute;
+                top: 40px;
                 cursor: pointer;
                 width: 42px;
             }
