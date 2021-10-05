@@ -1,4 +1,7 @@
 @--grey: #808080;
+@--grey-2: #f1f1f1;
+@--grey-3 :#A9A9A9;
+@--grey-light: #F1F0F0;
 @--dark: #252525;
 @--black: #000000;
 @--dark-2: #2D2D2D;
@@ -57,6 +60,12 @@ h3 {
     font-size: 20px;
     line-height: 27px;
     padding-bottom: 5px;
+}
+
+.h4-footer {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 ul {
@@ -407,17 +416,21 @@ a {
         flex-direction: column;
         align-items: center;
 
-        .img-wrapp {
-            img {
-                display: initial;
-                padding-bottom: 15px;
-            }
-        }
+        .review-cont {
+            .img-wrapp {
+                text-align: center;
 
-        p {
-            padding-bottom: 15px;
-            font-weight: 300;
-            text-align: center;
+                img {
+                    display: initial;
+                    padding-bottom: 15px;
+                }
+            }
+
+            p {
+                padding-bottom: 15px;
+                font-weight: 300;
+                text-align: center;
+            }
         }
     }
 
@@ -428,7 +441,7 @@ a {
     }
 }
 
-.slider  {
+.slider {
     display: flex;
 }
 
@@ -445,28 +458,198 @@ a {
     }
 
     .img-social {
-        img{
+        img {
             &:hover {
                 opacity: 1;
                 -webkit-animation: flash 1.5s;
                 animation: flash 1.5s;
             }
         }
-   }
+    }
 }
+
 @-webkit-keyframes flash {
     0% {
         opacity: .4;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes flash {
     0% {
         opacity: .4;
     }
+
     100% {
         opacity: 1;
     }
+}
+
+
+#section-6-representatives-logo {
+    padding-bottom: 120px;
+
+
+
+    .slider-representatives {
+        padding-bottom: 30px;
+
+        .slick-current {
+            background-image: url(/assets/img/spot-yellow-hover-repres.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .slick-track {
+            align-items: center;
+        }
+
+        .repr-block {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            min-height: 112px;
+
+
+            &:hover {
+                background-image: url(/assets/img/spot-yellow-hover-repres.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    .slider-representatives-for {
+        text-align: center;
+
+        .p-repres {
+            font-style: italic;
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }
+}
+
+#section-7-more-from-revive {
+    padding-bottom: 30px;
+
+    h2 {
+        padding-bottom: 10px;
+    }
+
+    .mfr-block-2 {
+        padding-bottom: 88px;
+    }
+
+    .mfr-block-3 {
+        max-width: 995px;
+        margin: auto;
+    }
+}
+
+footer {
+    border-top: 1px solid @--grey-light;
+    padding-top: 50px;
+
+    .footer-wrapp {
+        padding-bottom: 40px;
+    }
+
+    .menu-footer {
+        display: flex;
+
+        ul {
+            li:not(:last-child) {
+                padding-bottom: 15px;
+            }
+        }
+
+        ul:not(:last-child) {
+            padding-right: 60px;
+        }
+    }
+
+    .copyr {
+        text-align: center;
+        background-color: @--grey-2;
+        padding: 15px 0;
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            color: @--grey-3;
+        }
+    }
+
+    .footer-logo {
+        padding-bottom: 30px;
+    }
+
+    .footer-p {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 15px;
+    }
+
+    .input-footer {
+        border: 1px solid @--grey-3;
+        box-sizing: border-box;
+        border-radius: 15px;
+        width: 415px;
+        height: 45px;
+        appearance: none;
+        outline-width: 0;
+        background-image: url(/assets/img/input-footer-arrow.svg);
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: 50%;
+        margin-bottom: 15px;
+    }
+
+    input[value="Email Address"] {
+        font-size: 16px;
+        line-height: 19px;
+        color: @--grey-3;
+        padding-left: 25px;
+    }
+
+    .social-wrapper {
+        padding-bottom: 20px;
+        display: flex;
+
+        a:not(:last-child) {
+            padding-right: 10px;
+        }
+    }
+
+    .region {
+        display: flex;
+
+        p {
+            padding-right: 28px;
+        }
+
+        .flags {
+            display: flex;
+            flex-direction: column;
+
+            .canada-flag {
+                cursor: pointer;
+                padding-bottom: 5px;
+            }
+
+            .america-flag {
+                cursor: pointer;
+                width: 42px;
+            }
+        }
+
+    }
+
 }

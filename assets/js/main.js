@@ -1,45 +1,21 @@
-$('.slider').slick({
-    infinite: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-          }
-        }
-      ]
-    });
+jQuery(document).ready(function ($) {
 
-$('.slider-representatives').slick({
-    infinite: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
+
+  // if ($(".canada-flag").show()) {
+    
+  //   $(".america-flag").hide();
+  //   $(".canada-flag").on("click", function () {
+  //     $(".america-flag").show();
+  //   });
+  // } else {
+  //   $(".canada-flag").hide();
+  //   $(".america-flag").on("click", function () {
+  //     $(".canada-flag").show();
+  //   });
+  // }
+
+
+
+
+
+});
