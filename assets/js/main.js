@@ -1,21 +1,17 @@
 jQuery(document).ready(function ($) {
 
-  $(".canada-flag").hover(function(){
-    $(".america-flag").show();
-  }, function(){
-    $(".america-flag").hide();
+
+  $(".container-currency .currency").click(function () {
+    $(".container-currency .currency").removeClass("select");
+    $(this).addClass("select");
   });
-  
 
 
+  $(".flags img").click(function () {
+    $(".flags img").removeClass("select-country");
 
-  // $(".canada-flag").show()
-  //   $(".america-flag").hide();
-  //   $(".canada-flag").on("click", function () {
-  //     $(".america-flag").show();
-  //   });
-
-
+    $(this).addClass("select-country");
+  });
 
 
   $(".toggle").click(function () {

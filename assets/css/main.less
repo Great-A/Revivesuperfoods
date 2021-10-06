@@ -6,6 +6,7 @@
 @--black: #000000;
 @--dark-2: #2D2D2D;
 @--yellow: #FEE343;
+@--white: #FFFFFF;
 
 
 
@@ -154,6 +155,7 @@ a {
     color: @--dark;
     top: 0;
     background-color: rgba(255, 255, 255, .77);
+    box-shadow: 0px 4px 8px #26260038;
 
     .menu-item {
         list-style-type: none;
@@ -175,8 +177,8 @@ a {
         }
     }
 
-    .header-wrapper {
 
+    .header-wrapper {
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -197,11 +199,36 @@ a {
                 .menu-header-menu {
                     display: flex;
                     margin: 0;
+
+                    #menu-item-1 {
+                        &:hover {
+                            .hover-menu {
+                                display: block;
+                            }
+                        }
+                    }
                 }
 
                 .hover-menu {
                     display: none;
+                    position: absolute;
+                    top: 45px;
+                    background-color: @--white;
+                    padding: 20px 80px 20px 20px;
+                    text-transform: none;
+                    box-shadow: 0px 4px 8px rgba(164, 164, 164, 0.17);
+
+                    li:not(:last-child) {
+                        padding-bottom: 25px;
+                    }
+
+                    li:last-child {
+                        padding-top: 20px;
+                        border-top: 1px solid @--grey-light;
+
+                    }
                 }
+
             }
         }
 
@@ -210,6 +237,31 @@ a {
 
             .bill-switch {
                 cursor: pointer;
+
+                .container-currency {
+                    display: flex;
+                    flex-direction: column;
+                    height: 25px;
+
+                    .currency {
+                        display: none;
+                        order: 1;
+                    }
+
+                    .select {
+                        display: block;
+
+                        order: 0;
+                    }
+
+
+                }
+
+                &:hover {
+                    .currency {
+                        display: block;
+                    }
+                }
 
                 .bill-switch-chevron-wrapp {
                     margin-left: 5px;
@@ -263,6 +315,7 @@ a {
 
 .top-banner-wrapper {
     background-image: url('/assets/img/banner-img.png');
+    background-attachment: fixed;
     position: relative;
     padding: 212px 0 254px;
     background-position: center;
@@ -311,15 +364,32 @@ a {
     }
 
     .block-2 {
-        .fruits-img-wrapp {
-            // background-image: url("/assets/img/spot-grey-best-sellers-hover.svg");
+        position: relative;
 
-            &:hover {}
+        .hover-spot {
+            position: absolute;
+            display: none;
+            left: -284px;
+            top: -245px;
+            z-index: 0;
+        }
+
+        .fruits-img-wrapp,
+        .col-md-5 {
+            z-index: 1;
+        }
+
+        &:hover {
+            .hover-spot {
+                display: block;
+            }
         }
 
         p {
             padding-bottom: 20px;
         }
+
+
     }
 
     .img-wrapp-strawberry {
@@ -340,15 +410,28 @@ a {
         background-size: contain;
         background-repeat: no-repeat;
         transition: 1.5s;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .col-lg {
+        position: relative;
         &:hover {
-            .button-wrapper {
-                display: block;
+            .button-wrapper-detail{
+                display: flex;
             }
         }
     }
 
-    .button-wrapper {
-        // display: none;
+    .button-wrapper-detail {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         justify-content: center;
         padding-top: 40px;
     }
@@ -362,6 +445,7 @@ a {
     }
 
     .bg-spot-green {
+        margin-top: 130px;
         background-image: url("/assets/img/spot-green.png");
 
         &:hover {
@@ -378,6 +462,7 @@ a {
     }
 
     .bg-spot-purple2 {
+        margin-top: 130px;
         background-image: url("/assets/img/spot-purple2.png");
 
         &:hover {
@@ -438,9 +523,14 @@ a {
             .img-wrapp {
                 text-align: center;
 
-                img {
-                    display: initial;
+                ul {
+                    display: flex;
+                    justify-content: center;
                     padding-bottom: 15px;
+
+                    li:not(:last-child) {
+                        padding-right: 5px;
+                    }
                 }
             }
 
@@ -561,7 +651,9 @@ a {
     }
 
     .mfr-block-2 {
+        position: relative;
         padding-bottom: 88px;
+
         img {
             padding-bottom: 20px;
         }
@@ -609,6 +701,12 @@ footer {
 
     .footer-logo {
         padding-bottom: 30px;
+    }
+
+    .footer-logo-mob {
+        display: none;
+        padding-bottom: 50px;
+        text-align: center;
     }
 
     .footer-p {
@@ -660,16 +758,31 @@ footer {
             display: flex;
             position: relative;
             flex-direction: column;
+            height: 30px;
+
+            img {
+                display: none;
+                order: 1;
+
+                &.select-country {
+                    order: 0;
+                    padding-bottom: 10px;
+                    display: block;
+                }
+            }
+
+            &:hover {
+                img {
+                    display: block;
+                }
+            }
 
             .canada-flag {
                 cursor: pointer;
-                padding-bottom: 5px;
+                padding-bottom: 10px;
             }
 
             .america-flag {
-                display: none;
-                position: absolute;
-                top: 40px;
                 cursor: pointer;
                 width: 42px;
             }

@@ -114,6 +114,7 @@ a:hover {
   color: #252525;
   top: 0;
   background-color: rgba(255, 255, 255, 0.77);
+  box-shadow: 0px 4px 8px #26260038;
 }
 .header-container .menu-item {
   list-style-type: none;
@@ -152,14 +153,46 @@ a:hover {
   display: flex;
   margin: 0;
 }
+.header-container .header-wrapper .logo-menu-wrapp .header-menu .menu-header-menu #menu-item-1:hover .hover-menu {
+  display: block;
+}
 .header-container .header-wrapper .logo-menu-wrapp .header-menu .hover-menu {
   display: none;
+  position: absolute;
+  top: 45px;
+  background-color: #FFFFFF;
+  padding: 20px 80px 20px 20px;
+  text-transform: none;
+  box-shadow: 0px 4px 8px rgba(164, 164, 164, 0.17);
+}
+.header-container .header-wrapper .logo-menu-wrapp .header-menu .hover-menu li:not(:last-child) {
+  padding-bottom: 25px;
+}
+.header-container .header-wrapper .logo-menu-wrapp .header-menu .hover-menu li:last-child {
+  padding-top: 20px;
+  border-top: 1px solid #F1F0F0;
 }
 .header-container .header-wrapper .header-right-menu {
   display: flex;
 }
 .header-container .header-wrapper .header-right-menu .bill-switch {
   cursor: pointer;
+}
+.header-container .header-wrapper .header-right-menu .bill-switch .container-currency {
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+}
+.header-container .header-wrapper .header-right-menu .bill-switch .container-currency .currency {
+  display: none;
+  order: 1;
+}
+.header-container .header-wrapper .header-right-menu .bill-switch .container-currency .select {
+  display: block;
+  order: 0;
+}
+.header-container .header-wrapper .header-right-menu .bill-switch:hover .currency {
+  display: block;
 }
 .header-container .header-wrapper .header-right-menu .bill-switch .bill-switch-chevron-wrapp {
   margin-left: 5px;
@@ -201,6 +234,7 @@ a:hover {
 }
 .top-banner-wrapper {
   background-image: url('/assets/img/banner-img.png');
+  background-attachment: fixed;
   position: relative;
   padding: 212px 0 254px;
   background-position: center;
@@ -239,6 +273,23 @@ a:hover {
 #section-1-how-it-work .block-1 {
   padding-bottom: 165px;
 }
+#section-1-how-it-work .block-2 {
+  position: relative;
+}
+#section-1-how-it-work .block-2 .hover-spot {
+  position: absolute;
+  display: none;
+  left: -284px;
+  top: -245px;
+  z-index: 0;
+}
+#section-1-how-it-work .block-2 .fruits-img-wrapp,
+#section-1-how-it-work .block-2 .col-md-5 {
+  z-index: 1;
+}
+#section-1-how-it-work .block-2:hover .hover-spot {
+  display: block;
+}
 #section-1-how-it-work .block-2 p {
   padding-bottom: 20px;
 }
@@ -258,10 +309,22 @@ a:hover {
   background-repeat: no-repeat;
   transition: 1.5s;
 }
-#section-2-best-sellers .bg-spot:hover .button-wrapper {
-  display: block;
+#section-2-best-sellers a {
+  text-decoration: none;
 }
-#section-2-best-sellers .button-wrapper {
+#section-2-best-sellers .col-lg {
+  position: relative;
+}
+#section-2-best-sellers .col-lg:hover .button-wrapper-detail {
+  display: flex;
+}
+#section-2-best-sellers .button-wrapper-detail {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   padding-top: 40px;
 }
@@ -272,6 +335,7 @@ a:hover {
   background-image: url("/assets/img/spot-yellow.png");
 }
 #section-2-best-sellers .bg-spot-green {
+  margin-top: 130px;
   background-image: url("/assets/img/spot-green.png");
 }
 #section-2-best-sellers .bg-spot-green:hover {
@@ -284,6 +348,7 @@ a:hover {
   background-image: url("/assets/img/spot-yellow.png");
 }
 #section-2-best-sellers .bg-spot-purple2 {
+  margin-top: 130px;
   background-image: url("/assets/img/spot-purple2.png");
 }
 #section-2-best-sellers .bg-spot-purple2:hover {
@@ -328,9 +393,13 @@ a:hover {
 #section-4-from-our .reviews .review-cont .img-wrapp {
   text-align: center;
 }
-#section-4-from-our .reviews .review-cont .img-wrapp img {
-  display: initial;
+#section-4-from-our .reviews .review-cont .img-wrapp ul {
+  display: flex;
+  justify-content: center;
   padding-bottom: 15px;
+}
+#section-4-from-our .reviews .review-cont .img-wrapp ul li:not(:last-child) {
+  padding-right: 5px;
 }
 #section-4-from-our .reviews .review-cont p {
   padding-bottom: 15px;
@@ -418,6 +487,7 @@ a:hover {
   padding-bottom: 10px;
 }
 #section-7-more-from-revive .mfr-block-2 {
+  position: relative;
   padding-bottom: 88px;
 }
 #section-7-more-from-revive .mfr-block-2 img {
@@ -455,6 +525,11 @@ footer .copyr p {
 }
 footer .footer-logo {
   padding-bottom: 30px;
+}
+footer .footer-logo-mob {
+  display: none;
+  padding-bottom: 50px;
+  text-align: center;
 }
 footer .footer-p {
   font-weight: bold;
@@ -499,15 +574,25 @@ footer .region .flags {
   display: flex;
   position: relative;
   flex-direction: column;
+  height: 30px;
+}
+footer .region .flags img {
+  display: none;
+  order: 1;
+}
+footer .region .flags img.select-country {
+  order: 0;
+  padding-bottom: 10px;
+  display: block;
+}
+footer .region .flags:hover img {
+  display: block;
 }
 footer .region .flags .canada-flag {
   cursor: pointer;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 footer .region .flags .america-flag {
-  display: none;
-  position: absolute;
-  top: 40px;
   cursor: pointer;
   width: 42px;
 }
