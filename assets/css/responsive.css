@@ -61,6 +61,7 @@
     display: none;
   }
   .top-banner-wrapper {
+    position: relative;
     padding: 150px 0 254px;
   }
   .under-banner-menu {
@@ -142,8 +143,16 @@
   #section-7-more-from-revive .mfr-block-2 img {
     margin: auto;
   }
-  .mfr-block-3 img {
+  #section-7-more-from-revive .mfr-block-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #section-7-more-from-revive .mfr-block-3 img {
     margin: auto;
+  }
+  #section-7-more-from-revive .mfr-block-3 .col-md {
+    width: 170px;
   }
   footer .menu-footer {
     padding-bottom: 40px;

@@ -82,6 +82,7 @@
   }
 
   .top-banner-wrapper {
+    position: relative;
     padding: 150px 0 254px;
   }
 
@@ -139,7 +140,7 @@
     }
 
 
-  
+
   }
 
   #section-3-explore-products {
@@ -198,23 +199,35 @@
         margin: auto;
       }
     }
+
+    .mfr-block-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        margin: auto;
+      }
+
+      .col-md {
+        width: 170px;
+      }
+    }
+
   }
 
-  .mfr-block-3 {
-    img {
-      margin: auto;
-    }
-  }
+
 
   footer {
     .menu-footer {
       padding-bottom: 40px;
+
       ul:not(:last-child) {
         padding-right: 20px;
       }
     }
   }
-  
+
 
 }
 
@@ -233,7 +246,7 @@
       display: none;
     }
 
-    .footer-logo-mob  {
+    .footer-logo-mob {
       display: block;
     }
   }
